@@ -1,6 +1,9 @@
 import React from 'react'
 
 const CountryCard = ({country}) => {
+
+  const capitals = country.capital?.join(", ")
+
   return (
     <article className='bg-white rounded-md overflow-hidden lighTheme darkTheme'>
         <header className='h-[160px] lighTheme'>
@@ -11,7 +14,7 @@ const CountryCard = ({country}) => {
             <ul>
                 <li>Population: <span className='font-semibold'>{country.population}</span></li>
                 <li>Region: <span className='font-semibold'>{country.region}</span></li>
-                <li>Capital: <span className='font-semibold'>{country.capital ?? "N/A"}</span></li>
+                <li className='line-clamp-1'>Capital: <span className='font-semibold '>{capitals ?? "N/A"}</span></li>
             </ul>
         </section>
     </article>

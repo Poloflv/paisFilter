@@ -2,7 +2,6 @@ import React from 'react'
 import CountryCard from './CountryCard';
 
 const ListCountries = ({countries}) => {
-  console.log(countries);
   return (
     <section className='pt-10 grid gap-6 justify-center grid-cols-[repeat(auto-fill,_260px)] max-w-[1200px] mx-auto'>
       {
